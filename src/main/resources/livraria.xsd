@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.livre.com.br/livraria" xmlns:tns="http://www.livre.com.br/livraria" elementFormDefault="qualified">
+	<xs:element name="getDadosAutorRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nome" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="getDadosLivroRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nome" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="getDadosAutorResponse">
+		<xs:complexType>
+            <xs:sequence>
+                <xs:element name="autor" type="tns:autor"/>
+            </xs:sequence>
+        </xs:complexType>
+	</xs:element>
+	<xs:element name="getDadosLivroResponse">
+		<xs:complexType>
+            <xs:sequence>
+                <xs:element name="livro" type="tns:livro"/>
+            </xs:sequence>
+        </xs:complexType>
+	</xs:element>
+	<xs:complexType name="livro">
+		<xs:sequence>
+			<xs:element name="nome" type="xs:string" />
+			<xs:element name="qtdPaginas" type="xs:decimal" />
+			<xs:element name="genero" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="autor">
+		<xs:sequence>
+			<xs:element name="nome" type="xs:string" />
+			<xs:element name="idade" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</schema>
