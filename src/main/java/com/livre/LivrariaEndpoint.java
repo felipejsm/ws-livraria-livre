@@ -20,7 +20,7 @@ import br.com.livre.livraria.Livro;
 public class LivrariaEndpoint {
 	@Autowired 
 	private ILivro livroRepository;
-	private static final String NAME_SPACE_URI = "http://www.livre.com.br/livraria/";
+	private static final String NAME_SPACE_URI = "http://www.livre.com.br/ws/";
 	
 	@PayloadRoot(namespace=NAME_SPACE_URI,localPart="getDadosLivroRequest")
 	@ResponsePayload

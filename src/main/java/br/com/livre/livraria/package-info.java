@@ -2,8 +2,8 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2017.04.10 às 08:42:53 PM BRT 
+// Gerado em: 2017.04.23 às 11:55:28 AM BRT 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.livre.com.br/livraria", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.livre.com.br/ws/livraria", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package br.com.livre.livraria;
