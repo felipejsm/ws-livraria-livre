@@ -20,7 +20,7 @@ import br.com.livre.livraria.Livro;
 public class LivrariaEndpoint {
 	@Autowired 
 	private ILivro livroRepository;
-	private static final String NAME_SPACE_URI = "http://www.livre.com.br/ws/";
+	private static final String NAME_SPACE_URI = "http://www.livre.com.br/ws";
 	
 	@PayloadRoot(namespace=NAME_SPACE_URI,localPart="getDadosLivroRequest")
 	@ResponsePayload
@@ -30,7 +30,7 @@ public class LivrariaEndpoint {
 		livro.setNome("A dança da morte");
 		livro.setQtdPaginas(new BigDecimal("1.500"));
 		livroRepository.save(livro);
-		LivroDomain livroCadastrado = livroRepository.findByNome(request);
+		LivroDomain livroCadastrado = livroRepository.findByNome(request.getNome());
 		GetDadosLivroResponse response = new GetDadosLivroResponse();
 		if(livroCadastrado != null) {
 			Livro livroXML = new Livro();
