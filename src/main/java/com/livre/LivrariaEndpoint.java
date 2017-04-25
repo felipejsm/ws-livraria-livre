@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
+import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import com.livre.entity.domain.LivroDomain;
@@ -20,11 +21,11 @@ import br.com.livre.livraria.Livro;
 public class LivrariaEndpoint {
 	@Autowired 
 	private ILivro livroRepository;
-	private static final String NAME_SPACE_URI = "http://www.livre.com.br/ws";
+	private static final String NAME_SPACE_URI = "http://www.livre.com.br/ws/livraria";
 	
 	@PayloadRoot(namespace=NAME_SPACE_URI,localPart="getDadosLivroRequest")
 	@ResponsePayload
-	public GetDadosLivroResponse getLivroResponse(GetDadosLivroRequest request) {
+	public GetDadosLivroResponse getLivroResponse(@RequestPayload GetDadosLivroRequest request) {
 		LivroDomain livro = new LivroDomain();
 		livro.setGenero("Romance");
 		livro.setNome("A dança da morte");
@@ -45,7 +46,7 @@ public class LivrariaEndpoint {
 	
 	@PayloadRoot(namespace=NAME_SPACE_URI, localPart="getDadosAutorRequest")
 	@ResponsePayload
-	public GetDadosAutorResponse getAutorResponse(GetDadosAutorRequest request) {
+	public GetDadosAutorResponse getAutorResponse(@RequestPayload GetDadosAutorRequest request) {
 		return null;
 	}
 }
