@@ -1,4 +1,4 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.livre.com.br/livraria" xmlns:tns="http://www.livre.com.br/livraria" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.livre.com.br/ws" xmlns:tns="http://www.livre.com.br/ws" elementFormDefault="qualified">
 	<xs:element name="getDadosAutorRequest">
 		<xs:complexType>
 			<xs:sequence>
