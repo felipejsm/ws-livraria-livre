@@ -27,7 +27,7 @@ public class WebServiceConfig extends WsConfigurerAdapter{
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("LivariaPort");
 		wsdl11Definition.setLocationUri("/ws");
-		wsdl11Definition.setTargetNamespace("http://www.livre.com.br/ws");//http://localhost:8080/ws/livraria.wsdl
+		wsdl11Definition.setTargetNamespace("http://www.livre.com.br/ws/livraria");//http://localhost:8080/ws/livraria.wsdl
 		wsdl11Definition.setSchema(livrariaSchema());
 		return wsdl11Definition;
 	}
